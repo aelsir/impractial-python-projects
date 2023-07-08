@@ -1,4 +1,10 @@
-import sys, random
+"""This program generates random combinations of Arabic names and adjectives to create great names. 
+It uses a predefined list of Arabic names and adjectives to select random combinations. 
+The user is prompted to try again to generate more names until they choose to quit.
+"""
+
+import sys
+import random
 
 
 
@@ -22,13 +28,14 @@ arabic_adjectives = (
     'محظوظ', 'مستقر', 'عابر', 'حاد', 'متواضع', 'سلمي', 'مستعد', 'محبوب', 'حنون', 'واعي'
 )
 
+
+
 print('Here is your first great name: ')
 while True:
-    name = random.choice(arabic_names)
+    nameName = random.choice(arabic_names)
     adj = random.choice(arabic_adjectives)
 
-    sys.stderr.write("\033[91m" + "hwlllo" + "\033[0m")
-    print("{} {}".format(name, adj), file=sys.stderr)
+    print(f"\033[91m {nameName} {adj} \033[0m", file=sys.stderr)
     print('\n')
 
     try_again = input("Try again? (Press Enter else n to quite) \n")
