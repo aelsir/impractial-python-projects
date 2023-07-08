@@ -17,12 +17,11 @@ def spanishized(name_to_spanish):
     vowels =  ('a', 'e', 'u', 'o', 'i')
     if name_to_spanish[0].lower() not in vowels:
         spanishized_name = name_to_spanish[1:] + name_to_spanish[0] + 'ay'
-        spanishized_name = spanishized_name.capitalize()
 
     else:
         spanishized_name = name_to_spanish + 'way'
 
-    return spanishized_name
+    return spanishized_name.capitalize()
 
 print(f"{english_name} is converted to:")
 print(f"\033[91m{spanishized(english_name)}\033[0m")
